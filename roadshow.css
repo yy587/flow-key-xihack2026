@@ -50,6 +50,8 @@ main img {filter:grayscale(1);}
 .cost-outlook-note {font-size:11px;color:#737373;margin-top:18px;}
 .demo-section {scroll-margin-top:76px;}
 .problem-scene, .cost-outlook {scroll-margin-top:96px;}
+.product-matrix {grid-template-columns:1fr;}
+.matrix-tab {cursor:default;}
 @media (max-width:1180px) {
   .market-context {grid-template-columns:1fr;gap:28px;}
   .market-context ol {gap:24px;}

@@ -121,31 +121,17 @@
 
         <div class="cost-outlook reveal"><div class="cost-outlook-heading"><span class="commerce-eyebrow">团队降本目标 · 非已验证量产报价</span><h3>原型之后，<br>成本怎样往下走？</h3><p>当前 15 个舵机独立控制，3D 打印结构的摩擦与非定制机械方案，是团队识别的优化重点。</p></div><div class="cost-targets"><article><span>结构优化阶段 · 团队目标</span><strong>≤ ¥120</strong><p>探索开模与机械结构优化，争取将成本控制在 120 元以内。</p></article><article><span>长期量产 · 团队粗略预估</span><strong>几十元级</strong><p>依赖结构、芯片、驱动与采购规模的共同优化，尚无完整量产 BOM 或供应商报价支撑。</p></article></div><dl class="cost-assumptions"><div><dt>芯片选型</dt><dd>团队沟通口径：当前芯片约 ¥22，批量定制目标约 ¥8；需确认型号、数量、功能与供应商报价。该口径不替代 BOM 中 ¥37.40 的开发板采购项。</dd></div><div><dt>执行器效率</dt><dd>探索单舵机驱动两个单元，减少执行器用量；独立控制能力、行程、负载与稳定性需要重新验证。</dd></div><div><dt>落地验证</dt><dd>补齐量产 BOM、模具与装配成本、质量测试、采购报价与试产结果后，才能确认最终成本。</dd></div></dl><p class="cost-outlook-note">团队据此判断产品具有市场化可能性；此处呈现工程假设与目标，不作为已实现成本、售价或利润率。</p></div>
 
-        <div class="matrix-heading reveal" id="product-matrix"><span class="commerce-eyebrow">我们不是只做这一台 15 柱装置</span><h2>一个技术底座，<br><em>多种产品形态。</em></h2><p>从轻量单一任务，到专业教学与大型空间。选择一个方向，查看它服务谁、需要改变什么。</p></div>
+        <div class="matrix-heading reveal" id="product-matrix"><span class="commerce-eyebrow">我们不是只做这一台 15 柱装置</span><h2>一个技术底座，<br><em>多种产品形态。</em></h2><p>从轻量单一任务，到专业教学与大型空间。四个方向，面向不同的学习与交互场景。</p></div>
         <div class="product-matrix reveal">
-          <div class="matrix-selector" role="tablist" aria-label="四种产品方向" aria-orientation="vertical">
-            <button class="matrix-tab" id="matrix-tone" role="tab" aria-selected="false" aria-controls="productDetail" data-product="tone" tabindex="-1"><span class="matrix-index">01</span><div><b>FLOW KEY Tone</b><p>语言声调训练</p></div><span class="matrix-spec">约 3 柱<br><small>产品规划</small></span><span class="matrix-arrow">↗</span></button>
-            <button class="matrix-tab" id="matrix-mini" role="tab" aria-selected="false" aria-controls="productDetail" data-product="mini" tabindex="-1"><span class="matrix-index">02</span><div><b>FLOW KEY OLED Mini</b><p>个人 / 家庭音乐学习</p></div><span class="matrix-spec">桌面化<br><small>产品规划</small></span><span class="matrix-arrow">↗</span></button>
-            <button class="matrix-tab active" id="matrix-edu" role="tab" aria-selected="true" aria-controls="productDetail" data-product="edu"><span class="matrix-index">03</span><div><b>FLOW KEY EDU</b><p>专业音乐教学</p></div><span class="matrix-spec">完整 15 柱<br><small>当前原型方向</small></span><span class="matrix-arrow">↗</span></button>
-            <button class="matrix-tab" id="matrix-space" role="tab" aria-selected="false" aria-controls="productDetail" data-product="space" tabindex="-1"><span class="matrix-index">04</span><div><b>FLOW KEY SPACE</b><p>商业 / 展览 / 艺术空间</p></div><span class="matrix-spec">大型定制<br><small>概念方向</small></span><span class="matrix-arrow">↗</span></button>
+          <div class="matrix-selector" aria-label="四种产品方向">
+            <div class="matrix-tab"><span class="matrix-index">01</span><div><b>FLOW KEY Tone</b><p>语言声调训练</p></div><span class="matrix-spec">约 3 柱<br><small>产品规划</small></span></div>
+            <div class="matrix-tab"><span class="matrix-index">02</span><div><b>FLOW KEY OLED Mini</b><p>个人 / 家庭音乐学习</p></div><span class="matrix-spec">桌面化<br><small>产品规划</small></span></div>
+            <div class="matrix-tab"><span class="matrix-index">03</span><div><b>FLOW KEY EDU</b><p>专业音乐教学</p></div><span class="matrix-spec">完整 15 柱<br><small>当前原型方向</small></span></div>
+            <div class="matrix-tab"><span class="matrix-index">04</span><div><b>FLOW KEY SPACE</b><p>商业 / 展览 / 艺术空间</p></div><span class="matrix-spec">大型定制<br><small>概念方向</small></span></div>
           </div>
-          <article class="product-detail" id="productDetail" role="tabpanel" aria-labelledby="matrix-edu" tabindex="0">
-            <span class="product-stage" id="productStage">当前 15 柱原型的产品化方向</span><h3 id="productName">FLOW KEY EDU</h3><p class="product-position" id="productPosition">把“再高一点、再低一点”，变成学生看得见的反馈。</p>
-            <div class="edu-product-media" id="eduProductMedia"><img src="assets/zhege-product-render-v2.png" alt="FLOW KEY EDU 十五柱团队模型概念渲染"><span>概念渲染｜当前原型方向，非量产产品</span></div>
-            <div class="tone-preview" id="tonePreview" hidden>
-              <div class="tone-controls" role="group" aria-label="普通话四声走势示意"><button type="button" data-tone="0" aria-pressed="true">妈 · 平</button><button type="button" data-tone="1" aria-pressed="false">麻 · 扬</button><button type="button" data-tone="2" aria-pressed="false">马 · 弯</button><button type="button" data-tone="3" aria-pressed="false">骂 · 降</button></div>
-              <canvas id="toneCanvas" width="680" height="270" role="img" aria-label="普通话第一声：平稳高位走势示意"></canvas>
-              <div class="tone-preview-foot"><span id="toneCaption">第一声 · 平：保持相对稳定的高位走势</span><button type="button" id="toneReplay">播放走势 ↻</button></div>
-              <p>三根示意柱共同呈现发音前、中、后段的轮廓，不是一柱一声调。图为概念映射示意，非实时识别结果或实体原型。</p>
-            </div>
-            <dl class="product-detail-facts"><div><dt>目标用户</dt><dd id="productUsers"></dd></div><div><dt>产品特点</dt><dd id="productFeatures"></dd></div><div><dt>商业方向</dt><dd id="productBusiness"></dd></div></dl><p class="product-boundary" id="productBoundary"></p>
-          </article>
         </div>
-        <div class="core-foundation reveal"><div><span>统一技术底座</span><h3>FLOW KEY CORE</h3></div><p>声音采集 <i>→</i> 本地计算 <i>→</i> 声音识别 <i>→</i> 特征映射 <i>→</i> 舵机控制 <i>→</i> 实体反馈</p><span>当前音乐链路已验证；声调分析等新任务需配置并验证各自的模型与映射规则。</span></div>
 
-        <div class="tone-value reveal"><span class="commerce-eyebrow">Tone · 产品规划</span><h3>不只是听老师说<br>“第二声要往上”。<br><em>而是亲眼看见自己的声音<br>有没有“往上”。</em></h3><div><p>听到发音 → 识别声调 → 看见走势 → 调整发音</p><b>音乐音准 → 语言声调</b><p>计划比较实际与标准声调轨迹，让学习者理解哪里偏高、哪里偏低、走势是否正确。</p><p class="tone-language-note">四声示例仅限普通话；第三声示意为单字完整走势，连读变化需另设规则。粤语、民族语言与地方方言需使用各自的声调模型。</p></div></div>
 
-        <div class="reuse-panel reveal"><h3>换的是产品形态，<br><em>复用的是技术底座。</em></h3><div class="reuse-columns"><div><span>按任务改变</span><p>识别模型 / 算法<br>声音特征与映射规则<br>柱体数量、结构与尺寸<br>软件功能、教学内容与 UI</p></div><div><span>可以继续复用</span><p>ESP32 控制逻辑与麦克风采集<br>数据处理架构与舵机驱动<br>前端可视化与设备通信<br>实体交互框架</p></div></div><p class="reuse-note">输入 → 识别分析 → 数据映射 → 运动控制 → 实体表现。复用架构降低重复开发，具体语言识别与机械规格仍需独立验证。</p></div>
 
       </section>
 
