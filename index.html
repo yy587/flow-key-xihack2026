@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8f4" />
+    <meta name="description" content="FLOW KEY｜音浪柱子——把音准偏差转化为实体柱子的升降反馈。" />
+    <title>FLOW KEY｜音浪柱子</title>
+    <link rel="icon" href="assets/zhege-model-thumbnail.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span><b>FLOW KEY</b><small>音浪柱子</small></span>
+      </a>
+      <nav aria-label="主要导航">
+        <a href="#problem">问题</a>
+        <a href="#demo">现场演示</a>
+        <a href="#principle">工作原理</a>
+        <a href="#hardware">硬件结构</a>
+        <a href="#future">未来展望</a>
+      </nav>
+      <button class="header-demo" type="button" data-presentation>进入现场演示</button>
+    </header>
+
+    <aside class="device-panel" id="devicePanel" aria-hidden="true">
+      <div class="device-panel-head">
+        <span>设备状态</span>
+        <button type="button" id="deviceCloseButton" aria-label="关闭设备面板">关闭</button>
+      </div>
+      <strong id="deviceStatusLabel">演示就绪</strong>
+      <p>当前网页可使用模拟数据或浏览器麦克风。真实装置接口已预留。</p>
+      <dl>
+        <div><dt>设备</dt><dd>15 根独立升降柱</dd></div>
+        <div><dt>主音柱</dt><dd>12 根</dd></div>
+        <div><dt>辅助柱</dt><dd>3 根</dd></div>
+        <div><dt>麦克风</dt><dd id="panelMicStatus">等待启用</dd></div>
+        <div><dt>本地 AI</dt><dd>运行中</dd></div>
+        <div><dt>AI 降噪</dt><dd id="panelNoiseStatus">已开启</dd></div>
+      </dl>
+    </aside>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-content reveal">
+          <p class="hero-brand">FLOW KEY｜音浪柱子</p>
+          <h1>让声音，<br><em>被看见。</em></h1>
+          <p class="hero-lead">基于本地 AI 音高识别与实体升降结构，<br>将抽象的音准偏差转化为直观的物理反馈。</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-presentation>开始现场演示</button>
+            <a class="secondary-button" href="#principle">了解工作原理</a>
+          </div>
+        </div>
+        <div class="hero-callout hero-callout-left reveal">
+          <b>15</b><span>根独立升降柱</span><small>声音输入后形成实体地形</small>
+        </div>
+        <div class="hero-callout hero-callout-right reveal">
+          <b>本地 AI</b><span>实时理解音准偏差</span><small>低延迟，不依赖云端</small>
+        </div>
+        <div class="hero-foot">
+          <span>概念渲染｜基于团队结构模型</span>
+          <span>西客松 XiHack2026 AI 硬件创新赛道</span>
+        </div>
+      </section>
+
+      <section class="problem page-section" id="problem">
+        <div class="section-heading reveal">
+          <span>01｜用户问题</span>
+          <p>从模糊判断，升级为连续反馈</p>
+        </div>
+        <h2 class="problem-title reveal">“我知道唱得不准，<br>但到底<em>差在哪</em>？”</h2>
+        <div class="problem-grid">
+          <article class="problem-card muted-card reveal">
+            <span>传统反馈</span>
+            <strong>唱错了</strong>
+            <p>用户知道结果，却不知道应该升高还是降低，也不知道还差多少。</p>
+          </article>
+          <article class="problem-card answer-card reveal">
+            <span>FLOW KEY 教学反馈</span>
+            <div><strong>Re</strong><b>92%</b></div>
+            <p>音高略低，再稍微提高一点。</p>
+          </article>
+        </div>
+        <p class="problem-summary reveal">数字告诉你“差多少”，柱子的高度让你直接看见“正在接近”。</p>
+      </section>
+
+      <section class="demo-section" id="demo">
+        <div class="demo-shell" id="demoShell">
+          <div class="demo-topbar">
+            <div class="demo-brand">
+              <span class="live-dot" aria-hidden="true"></span>
+              <div><b>FLOW KEY｜音浪柱子</b><small id="demoSessionLabel">教学模式 · 等待开始</small></div>
+            </div>
+            <div class="mode-tabs" aria-label="产品模式">
+              <button class="active" type="button">教学模式</button>
+              <button type="button" disabled>音乐模式 · 未来功能</button>
+            </div>
+            <div class="demo-top-actions">
+              <button class="device-button" id="deviceButton" type="button" aria-expanded="false" aria-controls="devicePanel">设备状态</button>
+              <button class="exit-presentation" id="exitPresentationButton" type="button">退出大屏</button>
+            </div>
+          </div>
+
+          <div class="demo-intro">
+            <div>
+              <span>02｜现场演示</span>
+              <h2>唱一个音，<br>看见自己<em>差多少。</em></h2>
+            </div>
+            <p>选择目标音后发声。系统会把当前声音分配给相邻两个音级，再用真实舵机速度驱动 15 根柱子。</p>
+          </div>
+
+          <div class="teaching-toolbar">
+            <div class="toolbar-label">
+              <span>第一步</span>
+              <strong>选择目标音</strong>
+            </div>
+            <div class="note-selector" id="noteSelector" aria-label="选择目标音"></div>
+          </div>
+
+          <div class="teaching-stage">
+            <div class="column-visualizer" id="columnVisualizer">
+              <div class="visualizer-meta">
+                <div><span>实体运动模拟</span><b>12 根主音柱 + 3 根辅助柱</b></div>
+                <div class="signal-state"><i><b id="signalBar"></b></i><span id="microphoneState">模拟数据待机</span></div>
+              </div>
+              <div class="product-rig">
+                <img src="assets/zhege-product-base-v2.png" alt="FLOW KEY 十五柱装置概念渲染正面图" />
+                <div class="column-track" id="columnTrack" aria-label="15 根实体柱运动模拟"></div>
+                <div class="rig-caption"><span>概念渲染｜基于团队模型</span><b id="servoStatus">舵机待机</b></div>
+              </div>
+              <div class="column-legend">
+                <span><i class="legend-main"></i>12 根音高反馈柱</span>
+                <span><i class="legend-aux"></i>3 根辅助动态柱</span>
+                <span>单次完整行程约 1.4 秒</span>
+              </div>
+            </div>
+
+            <aside class="teaching-feedback" id="teachingFeedback">
+              <div class="feedback-kicker"><span>实时教学反馈</span><b id="confidenceValue">等待声音</b></div>
+              <div class="feedback-primary">
+                <div><span>当前目标</span><strong id="targetNoteValue">Re</strong><small id="targetFrequencyValue">293.66 Hz</small></div>
+                <div><span>当前识别</span><strong id="currentNoteValue">—</strong><small id="currentFrequencyValue">等待发声</small></div>
+              </div>
+              <div class="similarity-block">
+                <span>音准匹配度</span>
+                <strong id="similarityValue">—</strong>
+                <p id="centsValue">选择目标音后开始</p>
+              </div>
+              <div class="neighbor-mix">
+                <div>
+                  <span><b id="lowerName">Do♯</b><em id="lowerPercent">0%</em></span>
+                  <i><b id="lowerBar"></b></i>
+                </div>
+                <div>
+                  <span><b id="upperName">Re</b><em id="upperPercent">0%</em></span>
+                  <i><b id="upperBar"></b></i>
+                </div>
+              </div>
+              <div class="ai-feedback waiting" id="aiFeedback">
+                <span>AI 教学建议</span>
+                <strong id="feedbackHeadline">等待发声</strong>
+                <p id="feedbackMessage">选择目标音后开始。系统会告诉你偏差方向与接近程度。</p>
+              </div>
+            </aside>
+          </div>
+
+          <div class="demo-controls">
+            <div class="source-switch" aria-label="声音来源">
+              <button class="active" id="demoSourceButton" type="button"><span>稳定备用</span><b>模拟演示</b></button>
+              <button id="microphoneSourceButton" type="button"><span>真实输入</span><b>麦克风实时</b></button>
+            </div>
+            <p>演示路径：选择目标音 → 开始 → 发声 → 查看匹配度 → 根据建议调整</p>
+            <div class="run-controls">
+              <button class="reset-button" id="resetButton" type="button">重新开始</button>
+              <button class="start-button" id="startButton" type="button"><span>开始体验</span><b>→</b></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="principle page-section" id="principle">
+        <div class="section-heading reveal">
+          <span>03｜工作原理</span>
+          <p>声音如何变成柱子的运动？</p>
+        </div>
+        <div class="principle-lead reveal">
+          <h2>从发声到运动，<br><em>每一步都看得懂。</em></h2>
+          <p>主要声音处理与 AI 判断在本地完成，再把分析结果转换为统一的柱体高度。</p>
+        </div>
+        <div class="flow-steps reveal">
+          <div><span>01</span><strong>用户发声</strong></div><i>→</i>
+          <div><span>02</span><strong>麦克风采集</strong></div><i>→</i>
+          <div><span>03</span><strong>AI 降噪</strong></div><i>→</i>
+          <div><span>04</span><strong>音高识别</strong></div><i>→</i>
+          <div><span>05</span><strong>匹配计算</strong></div><i>→</i>
+          <div><span>06</span><strong>舵机控制</strong></div><i>→</i>
+          <div><span>07</span><strong>柱子升降</strong></div>
+        </div>
+      </section>
+
+      <section class="physical-value page-section">
+        <div class="physical-copy reveal">
+          <span>04｜为什么不只做一个应用？</span>
+          <h2>声音很抽象。<br>物理变化<em>更容易理解。</em></h2>
+          <p>传统软件通过数字、波形或指针告诉用户结果。FLOW KEY 把偏差转换为真实高度，不需要先理解复杂乐理。</p>
+          <strong>看见柱子，就能看见自己的声音。</strong>
+        </div>
+        <div class="sense-path reveal" aria-label="听见、看见、理解">
+          <div><span>01</span><b>听见</b><p>唱出声音</p></div>
+          <i>→</i>
+          <div><span>02</span><b>看见</b><p>柱子变化</p></div>
+          <i>→</i>
+          <div><span>03</span><b>理解</b><p>调整音准</p></div>
+        </div>
+      </section>
+
+      <section class="local-ai page-section" id="local-ai">
+        <div class="section-heading reveal">
+          <span>05｜本地 AI</span>
+          <p>AI 在设备内部完成判断</p>
+        </div>
+        <div class="ai-heading reveal">
+          <h2>更低延迟，<br><em>更适合真实互动。</em></h2>
+          <p>降低对网络的依赖，也让原始声音数据尽量留在本地。</p>
+        </div>
+        <div class="ai-capabilities">
+          <article class="reveal"><span>01</span><strong>实时音高识别</strong><p>提取基频并映射十二音级</p></article>
+          <article class="reveal"><span>02</span><strong>AI 降噪</strong><p>减少环境噪声对判断的干扰</p></article>
+          <article class="reveal"><span>03</span><strong>本地语音控制</strong><p>用指令开始、停止或重新测试</p></article>
+          <article class="reveal"><span>04</span><strong>音准匹配计算</strong><p>把相邻音比例转换为柱体高度</p></article>
+        </div>
+        <div class="voice-demo reveal">
+          <div><span>语音控制演示</span><strong id="voiceCommandText">“开始检测”</strong><p id="voiceActionText">等待指令</p></div>
+          <div class="voice-actions">
+            <button type="button" data-voice="start">开始检测</button>
+            <button type="button" data-voice="stop">停止检测</button>
+            <button type="button" data-voice="reset">重新测试</button>
+            <button type="button" data-voice="noise">打开降噪</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="hardware page-section" id="hardware">
+        <div class="section-heading reveal">
+          <span>06｜硬件结构</span>
+          <p>15 根独立升降柱</p>
+        </div>
+        <div class="hardware-grid">
+          <figure class="hardware-image reveal">
+            <img src="assets/zhege-product-render-v2.png" alt="FLOW KEY 十五柱装置完整概念渲染" />
+            <figcaption>概念渲染｜基于团队结构模型，非实物照片</figcaption>
+          </figure>
+          <div class="hardware-copy reveal">
+            <h2>十二音级，<br>三根辅助柱，<br><em>共同形成连续地形。</em></h2>
+            <div class="hardware-facts">
+              <div><b>12</b><span>音高反馈柱</span><p>对应十二平均律的十二个音级</p></div>
+              <div><b>3</b><span>辅助动态柱</span><p>跟随附近主音柱，最大高度受限</p></div>
+              <div><b>15</b><span>独立控制通道</span><p>舵机缓慢升降，不模拟频谱跳动</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="future page-section" id="future">
+        <div class="section-heading reveal">
+          <span>07｜未来展望</span>
+          <p>从音准教学，到可触摸的声音交互平台</p>
+        </div>
+        <div class="future-heading reveal">
+          <h2>现在验证核心交互，<br><em>未来扩展产品边界。</em></h2>
+          <p>同一套声音识别、匹配计算和物理控制能力，可以适配不同外观、课程与空间。</p>
+        </div>
+        <div class="future-grid">
+          <article class="current reveal"><span>现在</span><b>01</b><h3>音乐教学</h3><p>音阶训练、视唱练耳、音程训练、声乐教学与音准纠正。</p></article>
+          <article class="reveal"><span>下一阶段 · 未来功能</span><b>02</b><h3>音乐可视化</h3><p>分析音乐中的节奏与音高，让 15 根柱子形成动态实体地形。</p></article>
+          <article class="reveal"><span>商业化</span><b>03</b><h3>多场景产品</h3><p>音乐教育、家庭学习、展览互动、艺术装置与商业空间。</p></article>
+          <article class="reveal"><span>长期</span><b>04</b><h3>开放交互平台</h3><p>开放控制接口，让创作者定义声音、AI 识别与物理运动的关系。</p></article>
+        </div>
+      </section>
+
+      <section class="closing">
+        <p>FLOW KEY｜音浪柱子</p>
+        <h2>让声音从「听见」，<br>走向「看见」。</h2>
+        <span>AI × 声音 × 实体交互</span>
+        <button class="primary-button light" type="button" data-presentation>再次进入现场演示</button>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <strong id="toastTitle">提示</strong>
+      <span id="toastMessage"></span>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
