@@ -60,22 +60,22 @@ function drawTone(progress) {
   if (canvas.width !== width * scale) {canvas.width = width * scale; canvas.height = height * scale;}
   ctx.setTransform(scale, 0, 0, scale, 0, 0);
   ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = '#eef3ee'; ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = '#f2f2f2'; ctx.fillRect(0, 0, width, height);
   const points = TONE_CONTOURS[toneIndex].points;
   const xs = [160, 340, 520];
   const y = value => 215 - value * 155;
-  ctx.strokeStyle = '#d1ddd3'; ctx.lineWidth = 1;
+  ctx.strokeStyle = '#dadada'; ctx.lineWidth = 1;
   for (const row of [60, 110, 160, 215]) {ctx.beginPath();ctx.moveTo(60, row);ctx.lineTo(620, row);ctx.stroke();}
-  ctx.fillStyle = '#66716b'; ctx.font = '13px "Microsoft YaHei", sans-serif';
+  ctx.fillStyle = '#6e6e6e'; ctx.font = '13px "Microsoft YaHei", sans-serif';
   ctx.fillText('音高', 28, 44); ctx.fillText('发音过程 →', 548, 252);
   xs.forEach((x, index) => {
     const eased = 1 - Math.pow(1 - Math.max(0, Math.min(1, progress * 1.5 - index * .25)), 3);
     const top = y(.06 + (points[index] - .06) * eased);
-    ctx.fillStyle = '#b5cdbb'; ctx.fillRect(x - 28, top, 56, 215 - top);
-    ctx.fillStyle = '#153d2e';ctx.textAlign = 'center';ctx.font = '14px "Microsoft YaHei", sans-serif';
+    ctx.fillStyle = '#c7c7c7'; ctx.fillRect(x - 28, top, 56, 215 - top);
+    ctx.fillStyle = '#181818';ctx.textAlign = 'center';ctx.font = '14px "Microsoft YaHei", sans-serif';
     ctx.fillText(['前段', '中段', '后段'][index], x, 240);
   });
-  ctx.textAlign = 'start';ctx.strokeStyle = '#1f5a42';ctx.lineWidth = 3;
+  ctx.textAlign = 'start';ctx.strokeStyle = '#333333';ctx.lineWidth = 3;
   ctx.beginPath();ctx.moveTo(xs[0], y(points[0]));
   for (let i = 1; i <= 80 * progress; i++) {
     const t = i / 80 * 2;
@@ -85,7 +85,7 @@ function drawTone(progress) {
   }
   ctx.stroke();
   xs.forEach((x, index) => {
-    if (progress * 2 >= index) {ctx.fillStyle = '#153d2e';ctx.beginPath();ctx.arc(x, y(points[index]), 5, 0, Math.PI * 2);ctx.fill();}
+    if (progress * 2 >= index) {ctx.fillStyle = '#181818';ctx.beginPath();ctx.arc(x, y(points[index]), 5, 0, Math.PI * 2);ctx.fill();}
   });
 }
 function playTone() {

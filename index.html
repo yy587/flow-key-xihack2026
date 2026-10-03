@@ -3,25 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f7f8f4" />
-    <meta name="description" content="FLOW KEY｜音浪柱子——把音准偏差转化为实体柱子的升降反馈。" />
-    <title>FLOW KEY｜音浪柱子</title>
+    <meta name="theme-color" content="#f5f5f5" />
+    <meta name="description" content="FLOW KEY｜音浪柱——把音准偏差转化为实体柱子的升降反馈。" />
+    <title>FLOW KEY｜音浪柱</title>
     <link rel="icon" href="assets/zhege-model-thumbnail.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="commerce.css" />
+    <link rel="stylesheet" href="roadshow.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="返回首页">
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        <span><b>FLOW KEY</b><small>音浪柱子</small></span>
+        <span><b>FLOW KEY</b><small>音浪柱</small></span>
       </a>
       <nav aria-label="主要导航">
         <a href="#problem">问题</a>
-        <a href="#demo">现场演示</a>
+        <a href="#business">商业价值</a>
         <a href="#principle">工作原理</a>
         <a href="#hardware">硬件结构</a>
-        <a href="#business">商业落地</a>
+        <a href="#demo">体验</a>
       </nav>
       <button class="header-demo" type="button" data-presentation>进入现场演示</button>
     </header>
@@ -46,13 +47,9 @@
     <main id="top">
       <section class="hero">
         <div class="hero-content reveal">
-          <p class="hero-brand">FLOW KEY｜音浪柱子</p>
+          <p class="hero-brand">FLOW KEY｜音浪柱</p>
           <h1>让声音，<br><em>被看见。</em></h1>
-          <p class="hero-lead">基于本地 AI 音高识别与实体升降结构，<br>将抽象的音准偏差转化为直观的物理反馈。</p>
-          <div class="hero-actions">
-            <button class="primary-button" type="button" data-presentation>开始现场演示</button>
-            <a class="secondary-button" href="#principle">了解工作原理</a>
-          </div>
+          <p class="hero-lead">AI 量化音高，实体回应声音。<br>让音乐学习，多一份理解、趣味与陪伴。</p>
         </div>
         <div class="hero-callout hero-callout-left reveal">
           <b>15</b><span>根独立升降柱</span><small>声音输入后形成实体地形</small>
@@ -69,9 +66,13 @@
       <section class="problem page-section" id="problem">
         <div class="section-heading reveal">
           <span>01｜用户问题</span>
-          <p>从模糊判断，升级为连续反馈</p>
+          <p>儿童音乐启蒙，也需要看得见的反馈</p>
         </div>
-        <h2 class="problem-title reveal">“我知道唱得不准，<br>但到底<em>差在哪</em>？”</h2>
+        <h2 class="problem-title reveal">“再高一点”有多高？<br>孩子需要<em>看得见的答案。</em></h2>
+        <figure class="problem-scene reveal">
+          <img src="assets/music-learning-scene.png" alt="儿童唱音阶与成人练习吉他时，对音高变化感到困惑的双场景示意" loading="lazy">
+          <figcaption><div><b>孩子听到了音名，<br>却还没理解高与低。</b><p>Do、Re、Mi 能跟着唱，音高差异却仍然抽象。</p></div><div><b>学习者知道不对，<br>却不知道如何调整。</b><p>听觉模仿需要明确的方向和可量化的反馈。</p></div><span>场景示意｜用户提供素材，非用户调研或产品实拍</span></figcaption>
+        </figure>
         <div class="problem-grid">
           <article class="problem-card muted-card reveal">
             <span>传统反馈</span>
@@ -85,100 +86,69 @@
           </article>
         </div>
         <p class="problem-summary reveal">数字告诉你“差多少”，柱子的高度让你直接看见“正在接近”。</p>
+        <div class="companion-position reveal"><div><span>产品定位</span><h3>学一点，玩一下。<br>让声音有个回应。</h3></div><div><p>以儿童音高量化教学为核心切入点，探索 AI 半教跟随：把教育、娱乐与陪伴结合，让练习更愿意持续。</p><p>亮珠交互作为后续形象与趣味设计方向，用可见的回应降低单纯教学的枯燥感。</p><small>当前为 15 柱技术原型；半教跟随、陪伴体验和亮珠方案属于待验证的交互方向。</small></div></div>
+        <div class="recording-scene reveal" id="recording-demo"><div><span>现场素材 · 演示顺序 01</span><h3>先听一段“姐姐”。</h3><p>听见真实发声，再理解学习者为什么需要音高反馈。</p></div><div class="recording-player"><audio id="roadshowAudio" controls preload="metadata" aria-label="姐姐现场录音片段" src="assets/sister-recording.wav"></audio><p id="recordingStatus" role="status">姐姐 · 团队提供录音</p><label class="recording-import" for="recordingFile">替换本次演示音频 ↗</label><input id="recordingFile" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg" class="sr-only"><small>原始素材：371.aiff · 浏览器兼容播放版。可暂停或拖动选取片段。</small></div></div>
       </section>
 
-      <section class="demo-section" id="demo">
-        <div class="demo-shell" id="demoShell">
-          <div class="demo-topbar">
-            <div class="demo-brand">
-              <span class="live-dot" aria-hidden="true"></span>
-              <div><b>FLOW KEY｜音浪柱子</b><small id="demoSessionLabel">教学模式 · 等待开始</small></div>
-            </div>
-            <div class="mode-tabs" aria-label="产品模式">
-              <button class="active" type="button">教学模式</button>
-              <button type="button" disabled>音乐模式 · 未来功能</button>
-            </div>
-            <div class="demo-top-actions">
-              <button class="device-button" id="deviceButton" type="button" aria-expanded="false" aria-controls="devicePanel">设备状态</button>
-              <button class="exit-presentation" id="exitPresentationButton" type="button">退出大屏</button>
-            </div>
+      <section class="commerce page-section" id="business" aria-labelledby="businessTitle">
+        <div class="section-heading reveal"><span>02｜商业价值与落地路径</span><p>从核心学习场景，走向可复制的产品</p></div>
+        <div class="commerce-intro reveal">
+          <span class="commerce-eyebrow">从可运行原型，到可复制的 AI 声音交互硬件</span>
+          <h2 id="businessTitle">不止能演示，<br><em>更要能够落地。</em></h2>
+          <p>当前 15 柱产品，首先验证声音采集、识别与分析、音准匹配、舵机控制到实体反馈的完整闭环。<br>下一步，复用底层架构，让不同的学习任务拥有适合自己的产品形态。</p>
+          <nav class="commerce-jump" aria-label="商业模块导航"><a href="#prototype-cost">原型成本 ↗</a><a href="#product-matrix">产品矩阵 ↗</a><a href="#market-path">落地路径 ↗</a></nav>
+        </div>
+
+        <div class="market-context reveal"><div><span class="commerce-eyebrow">为什么选择音乐学习？</span><h3>理解声音，<br>也是培养审美。</h3></div><ol><li><span>01 · 政策背景</span><h4>美育融入素质教育</h4><p>学校美育浸润行动强调艺术实践与审美素养，音乐教育是美育的组成部分。</p><a href="https://www.moe.gov.cn/srcsite/A17/moe_794/moe_628/202401/t20240102_1097467.html" target="_blank" rel="noopener noreferrer">依据：教育部美育浸润行动通知 ↗</a></li><li><span>02 · 团队趋势判断</span><h4>AI 时代，更重视创造力</h4><p>工具能力提升后，团队认为审美、表达与创造力会成为更值得长期培养的能力。</p></li><li><span>03 · 团队场景判断</span><h4>音乐也是一种闲暇体验</h4><p>学习音乐不只为了考核，也可以服务日常兴趣、陪伴与精神需求。</p></li></ol><small>以上为政策背景与团队判断，不代表市场规模、增长率或已经验证的购买需求。</small></div>
+
+        <div class="prototype-cost reveal" id="prototype-cost">
+          <div class="cost-summary">
+            <span class="commerce-eyebrow">真实采购 · 当前原型</span><h3>一台 FLOW KEY 原型，<br>需要多少钱？</h3>
+            <div class="cost-total"><span>¥</span><strong id="bomTotal">264.55</strong></div>
+            <b>当前已统计原型材料成本</b>
+            <p>以上为当前原型已统计材料采购成本，不等同于最终量产 BOM、制造成本或产品零售价。</p>
+            <span class="cost-source">依据：团队提供的八项采购数据<br>未列项目不计入本次统计，不推导售价或利润率。</span>
           </div>
-
-          <div class="demo-intro">
-            <div>
-              <span>02｜现场演示</span>
-              <h2>唱一个音，<br>看见自己<em>差多少。</em></h2>
-            </div>
-            <p>选择目标音后发声。系统会把当前声音分配给相邻两个音级，再用真实舵机速度驱动 15 根柱子。</p>
-          </div>
-
-          <div class="teaching-toolbar">
-            <div class="toolbar-label">
-              <span>第一步</span>
-              <strong>选择目标音</strong>
-            </div>
-            <div class="note-selector" id="noteSelector" aria-label="选择目标音"></div>
-          </div>
-
-          <div class="teaching-stage">
-            <div class="column-visualizer" id="columnVisualizer">
-              <div class="visualizer-meta">
-                <div><span>实体运动模拟</span><b>12 根主音柱 + 3 根辅助柱</b></div>
-                <div class="signal-state"><i><b id="signalBar"></b></i><span id="microphoneState">模拟数据待机</span></div>
-              </div>
-              <div class="product-rig">
-                <img src="assets/zhege-product-base-v2.png" alt="FLOW KEY 十五柱装置概念渲染正面图" />
-                <div class="column-track" id="columnTrack" aria-label="15 根实体柱运动模拟"></div>
-                <div class="rig-caption"><span>概念渲染｜基于团队模型</span><b id="servoStatus">舵机待机</b></div>
-              </div>
-              <div class="column-legend">
-                <span><i class="legend-main"></i>12 根音高反馈柱</span>
-                <span><i class="legend-aux"></i>3 根辅助动态柱</span>
-                <span>单次完整行程约 1.4 秒</span>
-              </div>
-            </div>
-
-            <aside class="teaching-feedback" id="teachingFeedback">
-              <div class="feedback-kicker"><span>实时教学反馈</span><b id="confidenceValue">等待声音</b></div>
-              <div class="feedback-primary">
-                <div><span>当前目标</span><strong id="targetNoteValue">Re</strong><small id="targetFrequencyValue">293.66 Hz</small></div>
-                <div><span>当前识别</span><strong id="currentNoteValue">—</strong><small id="currentFrequencyValue">等待发声</small></div>
-              </div>
-              <div class="similarity-block">
-                <span>音准匹配度</span>
-                <strong id="similarityValue">—</strong>
-                <p id="centsValue">选择目标音后开始</p>
-              </div>
-              <div class="neighbor-mix">
-                <div>
-                  <span><b id="lowerName">Do♯</b><em id="lowerPercent">0%</em></span>
-                  <i><b id="lowerBar"></b></i>
-                </div>
-                <div>
-                  <span><b id="upperName">Re</b><em id="upperPercent">0%</em></span>
-                  <i><b id="upperBar"></b></i>
-                </div>
-              </div>
-              <div class="ai-feedback waiting" id="aiFeedback">
-                <span>AI 教学建议</span>
-                <strong id="feedbackHeadline">等待发声</strong>
-                <p id="feedbackMessage">选择目标音后开始。系统会告诉你偏差方向与接近程度。</p>
-              </div>
-            </aside>
-          </div>
-
-          <div class="demo-controls">
-            <div class="source-switch" aria-label="声音来源">
-              <button class="active" id="demoSourceButton" type="button"><span>稳定备用</span><b>模拟演示</b></button>
-              <button id="microphoneSourceButton" type="button"><span>真实输入</span><b>麦克风实时</b></button>
-            </div>
-            <p>演示路径：选择目标音 → 开始 → 发声 → 查看匹配度 → 根据建议调整</p>
-            <div class="run-controls">
-              <button class="reset-button" id="resetButton" type="button">重新开始</button>
-              <button class="start-button" id="startButton" type="button"><span>开始体验</span><b>→</b></button>
-            </div>
+          <div class="bom-panel"><div class="bom-heading"><b>原型材料采购清单</b><span>8 项 · 人民币</span></div>
+            <table class="bom-table"><caption class="sr-only">FLOW KEY 当前已统计原型材料采购成本</caption><thead><tr><th scope="col">硬件 / 材料</th><th scope="col">采购成本</th></tr></thead><tbody id="bomRows"></tbody><tfoot><tr><th scope="row">当前已统计合计</th><td id="bomTableTotal">¥264.55</td></tr></tfoot></table>
+            <p class="bom-footnote">金额为所列项目的采购总额，非单个器件单价。舵机采购项的具体数量与单价，以采购记录为准。</p>
           </div>
         </div>
+
+        <div class="cost-levers reveal"><div><span class="commerce-eyebrow">进一步降本的路径</span><h3>先看结构，<br>再谈规模。</h3><p>当前是比赛阶段的小批量原型。降本空间来自具体工程路径，仍需通过供应链和制造验证。</p></div>
+          <ol><li><b>标准化器件</b><p>ESP32-S3、PCA9685、MG90S 等成熟可采购器件，减少对特殊执行器的依赖。</p></li><li><b>软件复用</b><p>音高识别、音准计算、AI 降噪、声音映射与运动控制架构，可跨产品复用。</p></li><li><b>模块化硬件</b><p>声音输入、计算、驱动、运动与结构相互解耦，无需为每种产品重做整套系统。</p></li><li><b>按任务调整规格</b><p>并非所有场景都需要 15 柱。三柱声调方向可减少执行器、材料、电源需求与产品体积。</p></li><li><b>产品化与批量优化</b><p>探索 PCB 集成、结构优化、集中采购与生产工艺改进；具体降本幅度待验证。</p></li></ol>
+        </div>
+
+        <div class="cost-outlook reveal"><div class="cost-outlook-heading"><span class="commerce-eyebrow">团队降本目标 · 非已验证量产报价</span><h3>原型之后，<br>成本怎样往下走？</h3><p>当前 15 个舵机独立控制，3D 打印结构的摩擦与非定制机械方案，是团队识别的优化重点。</p></div><div class="cost-targets"><article><span>结构优化阶段 · 团队目标</span><strong>≤ ¥150</strong><p>探索开模与机械结构优化，争取将成本控制在 150 元以内。</p></article><article><span>长期量产 · 团队粗略预估</span><strong>几十元级</strong><p>依赖结构、芯片、驱动与采购规模的共同优化，尚无完整量产 BOM 或供应商报价支撑。</p></article></div><dl class="cost-assumptions"><div><dt>芯片选型</dt><dd>团队沟通口径：当前芯片约 ¥22，批量定制目标约 ¥8；需确认型号、数量、功能与供应商报价。该口径不替代 BOM 中 ¥37.40 的开发板采购项。</dd></div><div><dt>执行器效率</dt><dd>探索单舵机驱动两个单元，减少执行器用量；独立控制能力、行程、负载与稳定性需要重新验证。</dd></div><div><dt>落地验证</dt><dd>补齐量产 BOM、模具与装配成本、质量测试、采购报价与试产结果后，才能确认最终成本。</dd></div></dl><p class="cost-outlook-note">团队据此判断产品具有市场化可能性；此处呈现工程假设与目标，不作为已实现成本、售价或利润率。</p></div>
+
+        <div class="matrix-heading reveal" id="product-matrix"><span class="commerce-eyebrow">我们不是只做这一台 15 柱装置</span><h2>一个技术底座，<br><em>多种产品形态。</em></h2><p>从轻量单一任务，到专业教学与大型空间。选择一个方向，查看它服务谁、需要改变什么。</p></div>
+        <div class="product-matrix reveal">
+          <div class="matrix-selector" role="tablist" aria-label="四种产品方向" aria-orientation="vertical">
+            <button class="matrix-tab" id="matrix-tone" role="tab" aria-selected="false" aria-controls="productDetail" data-product="tone" tabindex="-1"><span class="matrix-index">01</span><div><b>FLOW KEY Tone</b><p>语言声调训练</p></div><span class="matrix-spec">约 3 柱<br><small>产品规划</small></span><span class="matrix-arrow">↗</span></button>
+            <button class="matrix-tab" id="matrix-mini" role="tab" aria-selected="false" aria-controls="productDetail" data-product="mini" tabindex="-1"><span class="matrix-index">02</span><div><b>FLOW KEY Mini</b><p>个人 / 家庭音乐学习</p></div><span class="matrix-spec">桌面化<br><small>产品规划</small></span><span class="matrix-arrow">↗</span></button>
+            <button class="matrix-tab active" id="matrix-edu" role="tab" aria-selected="true" aria-controls="productDetail" data-product="edu"><span class="matrix-index">03</span><div><b>FLOW KEY EDU</b><p>专业音乐教学</p></div><span class="matrix-spec">完整 15 柱<br><small>当前原型方向</small></span><span class="matrix-arrow">↗</span></button>
+            <button class="matrix-tab" id="matrix-space" role="tab" aria-selected="false" aria-controls="productDetail" data-product="space" tabindex="-1"><span class="matrix-index">04</span><div><b>FLOW KEY SPACE</b><p>商业 / 展览 / 艺术空间</p></div><span class="matrix-spec">大型定制<br><small>概念方向</small></span><span class="matrix-arrow">↗</span></button>
+          </div>
+          <article class="product-detail" id="productDetail" role="tabpanel" aria-labelledby="matrix-edu" tabindex="0">
+            <span class="product-stage" id="productStage">当前 15 柱原型的产品化方向</span><h3 id="productName">FLOW KEY EDU</h3><p class="product-position" id="productPosition">把“再高一点、再低一点”，变成学生看得见的反馈。</p>
+            <div class="edu-product-media" id="eduProductMedia"><img src="assets/zhege-product-render-v2.png" alt="FLOW KEY EDU 十五柱团队模型概念渲染"><span>概念渲染｜当前原型方向，非量产产品</span></div>
+            <div class="tone-preview" id="tonePreview" hidden>
+              <div class="tone-controls" role="group" aria-label="普通话四声走势示意"><button type="button" data-tone="0" aria-pressed="true">妈 · 平</button><button type="button" data-tone="1" aria-pressed="false">麻 · 扬</button><button type="button" data-tone="2" aria-pressed="false">马 · 弯</button><button type="button" data-tone="3" aria-pressed="false">骂 · 降</button></div>
+              <canvas id="toneCanvas" width="680" height="270" role="img" aria-label="普通话第一声：平稳高位走势示意"></canvas>
+              <div class="tone-preview-foot"><span id="toneCaption">第一声 · 平：保持相对稳定的高位走势</span><button type="button" id="toneReplay">播放走势 ↻</button></div>
+              <p>三根示意柱共同呈现发音前、中、后段的轮廓，不是一柱一声调。图为概念映射示意，非实时识别结果或实体原型。</p>
+            </div>
+            <dl class="product-detail-facts"><div><dt>目标用户</dt><dd id="productUsers"></dd></div><div><dt>产品特点</dt><dd id="productFeatures"></dd></div><div><dt>商业方向</dt><dd id="productBusiness"></dd></div></dl><p class="product-boundary" id="productBoundary"></p>
+          </article>
+        </div>
+        <div class="core-foundation reveal"><div><span>统一技术底座</span><h3>FLOW KEY CORE</h3></div><p>声音采集 <i>→</i> 本地计算 <i>→</i> 声音识别 <i>→</i> 特征映射 <i>→</i> 舵机控制 <i>→</i> 实体反馈</p><span>当前音乐链路已验证；声调分析等新任务需配置并验证各自的模型与映射规则。</span></div>
+
+        <div class="tone-value reveal"><span class="commerce-eyebrow">Tone · 产品规划</span><h3>不只是听老师说<br>“第二声要往上”。<br><em>而是亲眼看见自己的声音<br>有没有“往上”。</em></h3><div><p>听到发音 → 识别声调 → 看见走势 → 调整发音</p><b>音乐音准 → 语言声调</b><p>计划比较实际与标准声调轨迹，让学习者理解哪里偏高、哪里偏低、走势是否正确。</p><p class="tone-language-note">四声示例仅限普通话；第三声示意为单字完整走势，连读变化需另设规则。粤语、民族语言与地方方言需使用各自的声调模型。</p></div></div>
+
+        <div class="reuse-panel reveal"><h3>换的是产品形态，<br><em>复用的是技术底座。</em></h3><div class="reuse-columns"><div><span>按任务改变</span><p>识别模型 / 算法<br>声音特征与映射规则<br>柱体数量、结构与尺寸<br>软件功能、教学内容与 UI</p></div><div><span>可以继续复用</span><p>ESP32 控制逻辑与麦克风采集<br>数据处理架构与舵机驱动<br>前端可视化与设备通信<br>实体交互框架</p></div></div><p class="reuse-note">输入 → 识别分析 → 数据映射 → 运动控制 → 实体表现。复用架构降低重复开发，具体语言识别与机械规格仍需独立验证。</p></div>
+
+        <div class="market-heading reveal" id="market-path"><span class="commerce-eyebrow">发展计划 · 尚非合作订单</span><h2>FLOW KEY<br><em>怎么走向市场？</em></h2></div>
+        <div class="market-models reveal"><article><span>01 / Tone · Mini</span><h3>消费级硬件</h3><p>面向语言学习者、音乐学习者与家庭用户。</p></article><article><span>02 / EDU</span><h3>教育解决方案</h3><p>硬件 + 教学软件 + 教学内容，服务学校、音乐机构与教师。辅助教师，不替代教师。</p></article><article><span>03 / SPACE</span><h3>商业定制</h3><p>面向展览、品牌活动、科技馆与艺术商业空间，提供定制声音交互方案。</p></article><article><span>04 / CORE · 长期</span><h3>开放交互能力</h3><p>规划 API、SDK 与设备控制接口，供开发者、音乐人、教师和艺术家定义声音与物理反馈的关系。</p></article></div>
       </section>
 
       <section class="principle page-section" id="principle">
@@ -264,66 +234,9 @@
         </div>
       </section>
 
-      <section class="commerce page-section" id="business" aria-labelledby="businessTitle">
-        <div class="section-heading reveal"><span>07｜商业价值与落地路径</span><p>真实原型 → 真实成本 → 技术复用 → 产品化</p></div>
-        <div class="commerce-intro reveal">
-          <span class="commerce-eyebrow">从可运行原型，到可复制的 AI 声音交互硬件</span>
-          <h2 id="businessTitle">不止能演示，<br><em>更要能够落地。</em></h2>
-          <p>当前 15 柱产品，首先验证声音采集、识别与分析、音准匹配、舵机控制到实体反馈的完整闭环。<br>下一步，复用底层架构，让不同的学习任务拥有适合自己的产品形态。</p>
-          <nav class="commerce-jump" aria-label="商业模块导航"><a href="#prototype-cost">原型成本 ↗</a><a href="#product-matrix">产品矩阵 ↗</a><a href="#market-path">落地路径 ↗</a></nav>
-        </div>
-
-        <div class="prototype-cost reveal" id="prototype-cost">
-          <div class="cost-summary">
-            <span class="commerce-eyebrow">真实采购 · 当前原型</span><h3>一台 FLOW KEY 原型，<br>需要多少钱？</h3>
-            <div class="cost-total"><span>¥</span><strong id="bomTotal">264.55</strong></div>
-            <b>当前已统计原型材料成本</b>
-            <p>以上为当前原型已统计材料采购成本，不等同于最终量产 BOM、制造成本或产品零售价。</p>
-            <span class="cost-source">依据：团队提供的八项采购数据<br>未列项目不计入本次统计，不推导售价或利润率。</span>
-          </div>
-          <div class="bom-panel"><div class="bom-heading"><b>原型材料采购清单</b><span>8 项 · 人民币</span></div>
-            <table class="bom-table"><caption class="sr-only">FLOW KEY 当前已统计原型材料采购成本</caption><thead><tr><th scope="col">硬件 / 材料</th><th scope="col">采购成本</th></tr></thead><tbody id="bomRows"></tbody><tfoot><tr><th scope="row">当前已统计合计</th><td id="bomTableTotal">¥264.55</td></tr></tfoot></table>
-            <p class="bom-footnote">金额为所列项目的采购总额，非单个器件单价。舵机采购项的具体数量与单价，以采购记录为准。</p>
-          </div>
-        </div>
-
-        <div class="cost-levers reveal"><div><span class="commerce-eyebrow">进一步降本的路径</span><h3>先看结构，<br>再谈规模。</h3><p>当前是比赛阶段的小批量原型。降本空间来自具体工程路径，仍需通过供应链和制造验证。</p></div>
-          <ol><li><b>标准化器件</b><p>ESP32-S3、PCA9685、MG90S 等成熟可采购器件，减少对特殊执行器的依赖。</p></li><li><b>软件复用</b><p>音高识别、音准计算、AI 降噪、声音映射与运动控制架构，可跨产品复用。</p></li><li><b>模块化硬件</b><p>声音输入、计算、驱动、运动与结构相互解耦，无需为每种产品重做整套系统。</p></li><li><b>按任务调整规格</b><p>并非所有场景都需要 15 柱。三柱声调方向可减少执行器、材料、电源需求与产品体积。</p></li><li><b>产品化与批量优化</b><p>探索 PCB 集成、结构优化、集中采购与生产工艺改进；具体降本幅度待验证。</p></li></ol>
-        </div>
-
-        <div class="matrix-heading reveal" id="product-matrix"><span class="commerce-eyebrow">我们不是只做这一台 15 柱装置</span><h2>一个技术底座，<br><em>多种产品形态。</em></h2><p>从轻量单一任务，到专业教学与大型空间。选择一个方向，查看它服务谁、需要改变什么。</p></div>
-        <div class="product-matrix reveal">
-          <div class="matrix-selector" role="tablist" aria-label="四种产品方向" aria-orientation="vertical">
-            <button class="matrix-tab" id="matrix-tone" role="tab" aria-selected="false" aria-controls="productDetail" data-product="tone" tabindex="-1"><span class="matrix-index">01</span><div><b>FLOW KEY Tone</b><p>语言声调训练</p></div><span class="matrix-spec">约 3 柱<br><small>产品规划</small></span><span class="matrix-arrow">↗</span></button>
-            <button class="matrix-tab" id="matrix-mini" role="tab" aria-selected="false" aria-controls="productDetail" data-product="mini" tabindex="-1"><span class="matrix-index">02</span><div><b>FLOW KEY Mini</b><p>个人 / 家庭音乐学习</p></div><span class="matrix-spec">桌面化<br><small>产品规划</small></span><span class="matrix-arrow">↗</span></button>
-            <button class="matrix-tab active" id="matrix-edu" role="tab" aria-selected="true" aria-controls="productDetail" data-product="edu"><span class="matrix-index">03</span><div><b>FLOW KEY EDU</b><p>专业音乐教学</p></div><span class="matrix-spec">完整 15 柱<br><small>当前原型方向</small></span><span class="matrix-arrow">↗</span></button>
-            <button class="matrix-tab" id="matrix-space" role="tab" aria-selected="false" aria-controls="productDetail" data-product="space" tabindex="-1"><span class="matrix-index">04</span><div><b>FLOW KEY SPACE</b><p>商业 / 展览 / 艺术空间</p></div><span class="matrix-spec">大型定制<br><small>概念方向</small></span><span class="matrix-arrow">↗</span></button>
-          </div>
-          <article class="product-detail" id="productDetail" role="tabpanel" aria-labelledby="matrix-edu" tabindex="0">
-            <span class="product-stage" id="productStage">当前 15 柱原型的产品化方向</span><h3 id="productName">FLOW KEY EDU</h3><p class="product-position" id="productPosition">把“再高一点、再低一点”，变成学生看得见的反馈。</p>
-            <div class="edu-product-media" id="eduProductMedia"><img src="assets/zhege-product-render-v2.png" alt="FLOW KEY EDU 十五柱团队模型概念渲染"><span>概念渲染｜当前原型方向，非量产产品</span></div>
-            <div class="tone-preview" id="tonePreview" hidden>
-              <div class="tone-controls" role="group" aria-label="普通话四声走势示意"><button type="button" data-tone="0" aria-pressed="true">妈 · 平</button><button type="button" data-tone="1" aria-pressed="false">麻 · 扬</button><button type="button" data-tone="2" aria-pressed="false">马 · 弯</button><button type="button" data-tone="3" aria-pressed="false">骂 · 降</button></div>
-              <canvas id="toneCanvas" width="680" height="270" role="img" aria-label="普通话第一声：平稳高位走势示意"></canvas>
-              <div class="tone-preview-foot"><span id="toneCaption">第一声 · 平：保持相对稳定的高位走势</span><button type="button" id="toneReplay">播放走势 ↻</button></div>
-              <p>三根示意柱共同呈现发音前、中、后段的轮廓，不是一柱一声调。图为概念映射示意，非实时识别结果或实体原型。</p>
-            </div>
-            <dl class="product-detail-facts"><div><dt>目标用户</dt><dd id="productUsers"></dd></div><div><dt>产品特点</dt><dd id="productFeatures"></dd></div><div><dt>商业方向</dt><dd id="productBusiness"></dd></div></dl><p class="product-boundary" id="productBoundary"></p>
-          </article>
-        </div>
-        <div class="core-foundation reveal"><div><span>统一技术底座</span><h3>FLOW KEY CORE</h3></div><p>声音采集 <i>→</i> 本地计算 <i>→</i> 声音识别 <i>→</i> 特征映射 <i>→</i> 舵机控制 <i>→</i> 实体反馈</p><span>当前音乐链路已验证；声调分析等新任务需配置并验证各自的模型与映射规则。</span></div>
-
-        <div class="tone-value reveal"><span class="commerce-eyebrow">Tone · 产品规划</span><h3>不只是听老师说<br>“第二声要往上”。<br><em>而是亲眼看见自己的声音<br>有没有“往上”。</em></h3><div><p>听到发音 → 识别声调 → 看见走势 → 调整发音</p><b>音乐音准 → 语言声调</b><p>计划比较实际与标准声调轨迹，让学习者理解哪里偏高、哪里偏低、走势是否正确。</p><p class="tone-language-note">四声示例仅限普通话；第三声示意为单字完整走势，连读变化需另设规则。粤语、民族语言与地方方言需使用各自的声调模型。</p></div></div>
-
-        <div class="reuse-panel reveal"><h3>换的是产品形态，<br><em>复用的是技术底座。</em></h3><div class="reuse-columns"><div><span>按任务改变</span><p>识别模型 / 算法<br>声音特征与映射规则<br>柱体数量、结构与尺寸<br>软件功能、教学内容与 UI</p></div><div><span>可以继续复用</span><p>ESP32 控制逻辑与麦克风采集<br>数据处理架构与舵机驱动<br>前端可视化与设备通信<br>实体交互框架</p></div></div><p class="reuse-note">输入 → 识别分析 → 数据映射 → 运动控制 → 实体表现。复用架构降低重复开发，具体语言识别与机械规格仍需独立验证。</p></div>
-
-        <div class="market-heading reveal" id="market-path"><span class="commerce-eyebrow">发展计划 · 尚非合作订单</span><h2>FLOW KEY<br><em>怎么走向市场？</em></h2></div>
-        <div class="market-models reveal"><article><span>01 / Tone · Mini</span><h3>消费级硬件</h3><p>面向语言学习者、音乐学习者与家庭用户。</p></article><article><span>02 / EDU</span><h3>教育解决方案</h3><p>硬件 + 教学软件 + 教学内容，服务学校、音乐机构与教师。辅助教师，不替代教师。</p></article><article><span>03 / SPACE</span><h3>商业定制</h3><p>面向展览、品牌活动、科技馆与艺术商业空间，提供定制声音交互方案。</p></article><article><span>04 / CORE · 长期</span><h3>开放交互能力</h3><p>规划 API、SDK 与设备控制接口，供开发者、音乐人、教师和艺术家定义声音与物理反馈的关系。</p></article></div>
-      </section>
-
       <section class="future page-section" id="future">
         <div class="section-heading reveal">
-          <span>08｜未来发展路径</span>
+          <span>07｜未来发展路径</span>
           <p>先产品化，再复制到更多场景</p>
         </div>
         <div class="future-heading reveal">
@@ -334,10 +247,103 @@
       </section>
 
       <section class="closing">
-        <p>FLOW KEY｜音浪柱子</p>
+        <p>FLOW KEY｜音浪柱</p>
         <h2>让声音从「听见」，<br>走向「看见」，<br>再走向「理解」。</h2>
         <span>AI × 声音 × 实体交互</span>
-        <button class="primary-button light" type="button" data-presentation>再次进入现场演示</button>
+      </section>
+
+      <section class="demo-section" id="demo">
+        <div class="demo-shell" id="demoShell">
+          <div class="demo-topbar">
+            <div class="demo-brand">
+              <span class="live-dot" aria-hidden="true"></span>
+              <div><b>FLOW KEY｜音浪柱</b><small id="demoSessionLabel">教学模式 · 等待开始</small></div>
+            </div>
+            <div class="mode-tabs" aria-label="产品模式">
+              <button class="active" type="button">教学模式</button>
+              <button type="button" disabled>音乐模式 · 未来功能</button>
+            </div>
+            <div class="demo-top-actions">
+              <button class="device-button" id="deviceButton" type="button" aria-expanded="false" aria-controls="devicePanel">设备状态</button>
+              <button class="exit-presentation" id="exitPresentationButton" type="button">退出大屏</button>
+            </div>
+          </div>
+
+          <div class="demo-intro">
+            <div>
+              <span>08｜现场体验</span>
+              <h2>唱一个音，<br>看见自己<em>差多少。</em></h2>
+            </div>
+            <p>选择目标音后发声，查看相邻音级比例与柱体反馈。网页使用限速平滑动画示意机械运动。</p>
+          </div>
+
+          <div class="teaching-toolbar">
+            <div class="toolbar-label">
+              <span>第一步</span>
+              <strong>选择目标音</strong>
+            </div>
+            <div class="note-selector" id="noteSelector" aria-label="选择目标音"></div>
+          </div>
+
+          <div class="teaching-stage">
+            <div class="column-visualizer" id="columnVisualizer">
+              <div class="visualizer-meta">
+                <div><span>实体运动模拟</span><b>12 根主音柱 + 3 根辅助柱</b></div>
+                <div class="signal-state"><i><b id="signalBar"></b></i><span id="microphoneState">模拟数据待机</span></div>
+              </div>
+              <div class="product-rig">
+                <img src="assets/zhege-product-base-v2.png" alt="FLOW KEY 十五柱装置概念渲染正面图" />
+                <div class="column-track" id="columnTrack" aria-label="15 根实体柱运动模拟"></div>
+                <div class="rig-caption"><span>概念渲染｜基于团队模型</span><b id="servoStatus">舵机待机</b></div>
+              </div>
+              <div class="column-legend">
+                <span><i class="legend-main"></i>12 根音高反馈柱</span>
+                <span><i class="legend-aux"></i>3 根辅助动态柱</span>
+                <span>单次完整行程约 1.4 秒</span>
+              </div>
+            </div>
+
+            <aside class="teaching-feedback" id="teachingFeedback">
+              <div class="feedback-kicker"><span>实时教学反馈</span><b id="confidenceValue">等待声音</b></div>
+              <div class="feedback-primary">
+                <div><span>当前目标</span><strong id="targetNoteValue">Re</strong><small id="targetFrequencyValue">293.66 Hz</small></div>
+                <div><span>当前识别</span><strong id="currentNoteValue">—</strong><small id="currentFrequencyValue">等待发声</small></div>
+              </div>
+              <div class="similarity-block">
+                <span>音准匹配度</span>
+                <strong id="similarityValue">—</strong>
+                <p id="centsValue">选择目标音后开始</p>
+              </div>
+              <div class="neighbor-mix">
+                <div>
+                  <span><b id="lowerName">Do♯</b><em id="lowerPercent">0%</em></span>
+                  <i><b id="lowerBar"></b></i>
+                </div>
+                <div>
+                  <span><b id="upperName">Re</b><em id="upperPercent">0%</em></span>
+                  <i><b id="upperBar"></b></i>
+                </div>
+              </div>
+              <div class="ai-feedback waiting" id="aiFeedback">
+                <span>AI 教学建议</span>
+                <strong id="feedbackHeadline">等待发声</strong>
+                <p id="feedbackMessage">选择目标音后开始。系统会告诉你偏差方向与接近程度。</p>
+              </div>
+            </aside>
+          </div>
+
+          <div class="demo-controls">
+            <div class="source-switch" aria-label="声音来源">
+              <button class="active" id="demoSourceButton" type="button"><span>稳定备用</span><b>模拟演示</b></button>
+              <button id="microphoneSourceButton" type="button"><span>真实输入</span><b>麦克风实时</b></button>
+            </div>
+            <p>演示路径：选择目标音 → 开始 → 发声 → 查看匹配度 → 根据建议调整</p>
+            <div class="run-controls">
+              <button class="reset-button" id="resetButton" type="button">重新开始</button>
+              <button class="start-button" id="startButton" type="button"><span>开始体验</span><b>→</b></button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -348,5 +354,6 @@
 
     <script type="module" src="app.js"></script>
     <script type="module" src="commerce.js"></script>
+    <script type="module" src="roadshow.js"></script>
   </body>
 </html>

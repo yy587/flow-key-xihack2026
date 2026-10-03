@@ -14,16 +14,16 @@
 .commerce-jump a {padding:12px 22px;border:1px solid var(--line);border-radius:999px;font-size:14px;transition:background .25s,color .25s;}
 .commerce-jump a:hover {background:var(--green);color:white;}
 #prototype-cost, #product-matrix, #market-path {scroll-margin-top:105px;}
-.prototype-cost {display:grid;grid-template-columns:.95fr 1.05fr;overflow:hidden;border-radius:var(--radius-xl);background:#fff;box-shadow:0 20px 65px rgba(21,61,46,.05);}
+.prototype-cost {display:grid;grid-template-columns:.95fr 1.05fr;overflow:hidden;border-radius:var(--radius-xl);background:#fff;box-shadow:0 20px 65px rgba(51,51,51,.05);}
 .cost-summary {display:flex;flex-direction:column;align-items:flex-start;padding:clamp(32px,4vw,72px);background:var(--green);color:white;}
-.cost-summary .commerce-eyebrow {color:#c1dacb;}
+.cost-summary .commerce-eyebrow {color:#d4d4d4;}
 .cost-summary h3 {font-size:clamp(30px,2.8vw,48px);margin:26px 0 35px;}
 .cost-total {display:flex;align-items:baseline;gap:8px;white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:-.065em;}
 .cost-total span {font-size:clamp(30px,3vw,54px);font-weight:300;}
 .cost-total strong {font-size:clamp(68px,7.5vw,142px);font-weight:350;line-height:1.05;}
 .cost-summary > b {margin-top:22px;font-size:20px;font-weight:500;}
-.cost-summary > p {max-width:520px;font-size:15px;color:#d2e4d8;margin-top:24px;}
-.cost-source {display:block;margin-top:auto;padding-top:32px;color:#b1c9bb;font-size:12px;line-height:1.8;}
+.cost-summary > p {max-width:520px;font-size:15px;color:#dfdfdf;margin-top:24px;}
+.cost-source {display:block;margin-top:auto;padding-top:32px;color:#c3c3c3;font-size:12px;line-height:1.8;}
 .bom-panel {padding:clamp(28px,3.2vw,58px);}
 .bom-heading {display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:25px;}
 .bom-heading b {font-size:20px;font-weight:600;}
@@ -52,7 +52,7 @@
 .matrix-heading p {color:var(--muted);font-size:18px;}
 .product-matrix {display:grid;grid-template-columns:1.08fr 1fr;gap:28px;align-items:start;}
 .matrix-selector {display:flex;flex-direction:column;gap:12px;}
-.matrix-tab {display:grid;grid-template-columns:38px 1fr 112px 24px;gap:16px;align-items:center;width:100%;min-height:118px;padding:24px 28px;border-radius:24px;text-align:left;background:#e9ede7;color:var(--ink);transition:background .3s,color .3s,min-height .3s;}
+.matrix-tab {display:grid;grid-template-columns:38px 1fr 112px 24px;gap:16px;align-items:center;width:100%;min-height:118px;padding:24px 28px;border-radius:24px;text-align:left;background:#ececec;color:var(--ink);transition:background .3s,color .3s,min-height .3s;}
 .matrix-tab > div b {font-size:clamp(22px,2vw,34px);font-weight:500;letter-spacing:-.03em;}
 .matrix-tab p {font-size:15px;color:var(--muted);margin-top:5px;}
 .matrix-index {color:var(--green-3);font-size:12px;align-self:start;padding-top:6px;}
@@ -60,21 +60,21 @@
 .matrix-spec small {font-size:12px;color:var(--muted);}
 .matrix-arrow {font-size:23px;color:var(--green-3);}
 .matrix-tab.active {min-height:172px;background:var(--green);color:white;}
-.matrix-tab.active p, .matrix-tab.active .matrix-index, .matrix-tab.active .matrix-spec small, .matrix-tab.active .matrix-arrow {color:#bed6c7;}
-.matrix-tab:not(.active):hover {background:#dce6db;}
+.matrix-tab.active p, .matrix-tab.active .matrix-index, .matrix-tab.active .matrix-spec small, .matrix-tab.active .matrix-arrow {color:#d0d0d0;}
+.matrix-tab:not(.active):hover {background:#e3e3e3;}
 .product-detail {min-height:562px;padding:32px;border:1px solid var(--line);border-radius:28px;background:white;scroll-margin-top:96px;}
 .product-stage {display:inline-flex;padding:6px 12px;border-radius:999px;background:var(--mint);color:var(--green-2);font-size:12px;font-weight:600;}
 .product-detail h3 {font-size:34px;margin:20px 0 12px;}
 .product-position {color:var(--green);font-size:18px;}
-.edu-product-media {position:relative;margin:20px 0;border-radius:18px;overflow:hidden;background:#eeefec;}
+.edu-product-media {position:relative;margin:20px 0;border-radius:18px;overflow:hidden;background:#efefef;}
 .edu-product-media img {display:block;width:100%;aspect-ratio:2.5;object-fit:contain;}
-.edu-product-media > span {display:block;padding:8px 14px;color:var(--muted);font-size:11px;background:#f3f4f0;}
+.edu-product-media > span {display:block;padding:8px 14px;color:var(--muted);font-size:11px;background:#f3f3f3;}
 .product-detail-facts {margin:24px 0 0;}
 .product-detail-facts > div {display:grid;grid-template-columns:74px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line-light);font-size:14px;line-height:1.8;}
 .product-detail-facts dt {color:var(--green-3);font-weight:600;}
 .product-detail-facts dd {margin:0;color:var(--muted);}
 .product-boundary {padding:14px 16px;margin:16px 0 0;border-radius:14px;background:var(--paper-soft);color:var(--muted);font-size:12px;}
-.core-foundation {display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:center;padding:30px 36px;margin-top:24px;border-radius:22px;color:var(--green);background:#dce8dd;}
+.core-foundation {display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:center;padding:30px 36px;margin-top:24px;border-radius:22px;color:var(--green);background:#e5e5e5;}
 .core-foundation > div > span {font-size:12px;}
 .core-foundation h3 {margin:8px 0 0;font-size:25px;font-weight:650;letter-spacing:-.035em;}
 .core-foundation > p {font-size:16px;text-align:right;}
@@ -115,7 +115,7 @@
 .commercial-roadmap li:first-child {padding-left:0;}
 .commercial-roadmap li:last-child {padding-right:0;border:0;}
 .commercial-roadmap span {display:block;font-size:12px;color:var(--green-3);}
-.commercial-roadmap b {display:block;font-size:58px;font-weight:350;color:#b0c0b6;margin:20px 0;line-height:1;}
+.commercial-roadmap b {display:block;font-size:58px;font-weight:350;color:#bcbcbc;margin:20px 0;line-height:1;}
 .commercial-roadmap h3 {font-size:24px;margin-bottom:14px;font-weight:500;}
 .commercial-roadmap p {font-size:14px;color:var(--muted);line-height:1.8;}
 .commercial-roadmap .current b {color:var(--green-2);}
