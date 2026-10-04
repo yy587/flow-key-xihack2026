@@ -51,6 +51,7 @@ main img {filter:grayscale(1);}
 .demo-section {scroll-margin-top:76px;}
 .problem-scene, .cost-outlook {scroll-margin-top:96px;}
 .product-matrix {grid-template-columns:1fr;}
+.prototype-cost {grid-template-columns:1fr;}
 .matrix-tab {cursor:default;}
 @media (max-width:1180px) {
   .market-context {grid-template-columns:1fr;gap:28px;}

@@ -96,42 +96,23 @@
           <span class="commerce-eyebrow">从可运行原型，到可复制的 AI 声音交互硬件</span>
           <h2 id="businessTitle">能不能完成<em>商业化？</em></h2>
           <p>当前 15 柱产品，首先验证声音采集、识别与分析、音准匹配、舵机控制到实体反馈的完整闭环。<br>下一步，复用底层架构，让不同的学习任务拥有适合自己的产品形态。</p>
-          <nav class="commerce-jump" aria-label="商业模块导航"><a href="#prototype-cost">原型成本 ↗</a><a href="#product-matrix">产品矩阵 ↗</a></nav>
+          <nav class="commerce-jump" aria-label="商业模块导航"><a href="#prototype-cost">原型成本 ↗</a></nav>
         </div>
 
         <div class="market-context reveal"><div><span class="commerce-eyebrow">为什么选择音乐学习？</span><h3>理解声音，<br>也是培养审美。</h3></div><ol><li><span>01 · 政策背景</span><h4>美育融入素质教育</h4><p>学校美育浸润行动强调艺术实践与审美素养，音乐教育是美育的组成部分。</p><a href="https://www.moe.gov.cn/srcsite/A17/moe_794/moe_628/202401/t20240102_1097467.html" target="_blank" rel="noopener noreferrer">依据：教育部美育浸润行动通知 ↗</a></li><li><span>02 · 团队趋势判断</span><h4>AI 时代，更重视创造力</h4><p>工具能力提升后，团队认为审美、表达与创造力会成为更值得长期培养的能力。</p></li><li><span>03 · 团队场景判断</span><h4>AI 时代，学习要更高效率</h4><p>AI 会越来越融入真正的 AI 学习场景。</p></li></ol></div>
 
         <div class="prototype-cost reveal" id="prototype-cost">
           <div class="cost-summary">
-            <span class="commerce-eyebrow">真实采购 · 当前原型</span><h3>一台 FLOW KEY 原型，<br>需要多少钱？</h3>
-            <div class="cost-total"><span>¥</span><strong id="bomTotal">264.55</strong></div>
+            <span class="commerce-eyebrow">团队核算 · 当前原型</span><h3>一台 FLOW KEY 原型，<br>需要多少钱？</h3>
+            <div class="cost-total"><span>¥</span><strong id="bomTotal">220</strong></div>
             <b>当前已统计原型材料成本</b>
             <p>以上为当前原型已统计材料采购成本，不等同于最终量产 BOM、制造成本或产品零售价。</p>
-            <span class="cost-source">依据：团队提供的八项采购数据<br>未列项目不计入本次统计，不推导售价或利润率。</span>
-          </div>
-          <div class="bom-panel"><div class="bom-heading"><b>原型材料采购清单</b><span>8 项 · 人民币</span></div>
-            <table class="bom-table"><caption class="sr-only">FLOW KEY 当前已统计原型材料采购成本</caption><thead><tr><th scope="col">硬件 / 材料</th><th scope="col">采购成本</th></tr></thead><tbody id="bomRows"></tbody><tfoot><tr><th scope="row">当前已统计合计</th><td id="bomTableTotal">¥264.55</td></tr></tfoot></table>
-            <p class="bom-footnote">金额为所列项目的采购总额，非单个器件单价。舵机采购项的具体数量与单价，以采购记录为准。</p>
-          </div>
-        </div>
-
-        <div class="cost-levers reveal"><div><span class="commerce-eyebrow">进一步降本的路径</span><h3>先看结构，<br>再谈规模。</h3><p>当前是比赛阶段的小批量原型。降本空间来自具体工程路径，仍需通过供应链和制造验证。</p></div>
-          <ol><li><b>标准化器件</b><p>ESP32-S3、PCA9685、MG90S 等成熟可采购器件，减少对特殊执行器的依赖。</p></li><li><b>软件复用</b><p>音高识别、音准计算、AI 降噪、声音映射与运动控制架构，可跨产品复用。</p></li><li><b>结构优化</b><p>目前使用 15 个舵机，机械结构较为简约，仍有优化空间。下一步优化传动与摩擦，探索减少执行器用量。</p></li><li><b>按任务调整规格</b><p>三柱产品规划可帮助儿童学习音调，用实体变化理解声调走势，同时减少执行器、材料与产品体积。</p></li><li><b>产品化与批量优化</b><p>探索 PCB 集成、结构优化、集中采购与生产工艺改进；具体降本幅度待验证。</p></li></ol>
-        </div>
-
-        <div class="cost-outlook reveal"><div class="cost-outlook-heading"><span class="commerce-eyebrow">团队降本目标 · 非已验证量产报价</span><h3>原型之后，<br>成本怎样往下走？</h3><p>当前 15 个舵机独立控制，3D 打印结构的摩擦与非定制机械方案，是团队识别的优化重点。</p></div><div class="cost-targets"><article><span>结构优化阶段 · 团队目标</span><strong>≤ ¥120</strong><p>探索开模与机械结构优化，争取将成本控制在 120 元以内。</p></article><article><span>长期量产 · 团队粗略预估</span><strong>几十元级</strong><p>依赖结构、芯片、驱动与采购规模的共同优化，尚无完整量产 BOM 或供应商报价支撑。</p></article></div><dl class="cost-assumptions"><div><dt>芯片选型</dt><dd>团队沟通口径：当前芯片约 ¥22，批量定制目标约 ¥8；需确认型号、数量、功能与供应商报价。该口径不替代 BOM 中 ¥37.40 的开发板采购项。</dd></div><div><dt>执行器效率</dt><dd>探索单舵机驱动两个单元，减少执行器用量；独立控制能力、行程、负载与稳定性需要重新验证。</dd></div><div><dt>落地验证</dt><dd>补齐量产 BOM、模具与装配成本、质量测试、采购报价与试产结果后，才能确认最终成本。</dd></div></dl><p class="cost-outlook-note">团队据此判断产品具有市场化可能性；此处呈现工程假设与目标，不作为已实现成本、售价或利润率。</p></div>
-
-        <div class="matrix-heading reveal" id="product-matrix"><span class="commerce-eyebrow">我们不是只做这一台 15 柱装置</span><h2>一个技术底座，<br><em>多种产品形态。</em></h2><p>从轻量单一任务，到专业教学与大型空间。四个方向，面向不同的学习与交互场景。</p></div>
-        <div class="product-matrix reveal">
-          <div class="matrix-selector" aria-label="四种产品方向">
-            <div class="matrix-tab"><span class="matrix-index">01</span><div><b>FLOW KEY Tone</b><p>语言声调训练</p></div><span class="matrix-spec">约 3 柱<br><small>产品规划</small></span></div>
-            <div class="matrix-tab"><span class="matrix-index">02</span><div><b>FLOW KEY OLED Mini</b><p>个人 / 家庭音乐学习</p></div><span class="matrix-spec">桌面化<br><small>产品规划</small></span></div>
-            <div class="matrix-tab"><span class="matrix-index">03</span><div><b>FLOW KEY EDU</b><p>专业音乐教学</p></div><span class="matrix-spec">完整 15 柱<br><small>当前原型方向</small></span></div>
-            <div class="matrix-tab"><span class="matrix-index">04</span><div><b>FLOW KEY SPACE</b><p>商业 / 展览 / 艺术空间</p></div><span class="matrix-spec">大型定制<br><small>概念方向</small></span></div>
+            <span class="cost-source">依据：团队更新的原型成本口径<br>不推导产品售价或利润率。</span>
           </div>
         </div>
 
 
+        <div class="cost-outlook reveal"><div class="cost-outlook-heading"><span class="commerce-eyebrow">团队降本目标 · 非已验证量产报价</span><h3>原型之后，<br>成本怎样往下走？</h3><p>当前 15 个舵机独立控制，3D 打印结构的摩擦与非定制机械方案，是团队识别的优化重点。</p></div><div class="cost-targets"><article><span>结构优化阶段 · 团队目标</span><strong>≤ ¥120</strong><p>探索开模与机械结构优化，争取将成本控制在 120 元以内。</p></article><article><span>长期量产 · 团队粗略预估</span><strong>几十元级</strong><p>依赖结构、芯片、驱动与采购规模的共同优化，尚无完整量产 BOM 或供应商报价支撑。</p></article></div><dl class="cost-assumptions"><div><dt>芯片选型</dt><dd>团队沟通口径：当前芯片约 ¥22，批量定制目标约 ¥8；需确认型号、数量、功能与供应商报价。芯片成本不等同于开发板采购成本。</dd></div><div><dt>执行器效率</dt><dd>探索单舵机驱动两个单元，减少执行器用量；独立控制能力、行程、负载与稳定性需要重新验证。</dd></div><div><dt>落地验证</dt><dd>补齐量产 BOM、模具与装配成本、质量测试、采购报价与试产结果后，才能确认最终成本。</dd></div></dl><p class="cost-outlook-note">团队据此判断产品具有市场化可能性；此处呈现工程假设与目标，不作为已实现成本、售价或利润率。</p></div>
 
       </section>
 
@@ -337,7 +318,7 @@
     </div>
 
     <script type="module" src="app.js"></script>
-    <script type="module" src="commerce.js"></script>
+
     <script type="module" src="roadshow.js"></script>
   </body>
 </html>
